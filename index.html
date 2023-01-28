@@ -73,12 +73,27 @@
                 </div>
 
             <label>Which type of pets you want to adpot?&nbsp;&nbsp;</label>
-            <select>
-                <option>Select One</option>
-                <option>Dogs</option>
-                <option>Cats</option>
-                <option>Both</option>
+            <select id="animalselect" onchange="displaySelectAnimal()">
+                <option id="selectanimal" value="default" selected>Select One</option>
+                <option id="selectdog" value="dogs">Dogs</option>
+                <option id="selectcat" value="cats">Cats</option>
+                <option id="selectboth" value="both">Both</option>
             </select>
+                <div id="dogs" style="display: none; padding-top: 20px;">
+                <label>You Selected Dogs</label><br>
+                    <img src="images/dogicon.png" width="100px" style="padding-top: 10px;">
+                </div>
+                <div id="cats" style="display: none; padding-top: 20px;">    
+                <label>You Selected Cats</label><br>
+                    <img src="images/caticon.png" width="100px" style="padding-top: 10px;">
+                </div>
+                <div id="both" style="display: none; padding-top: 20px;">    
+                    <label>You Selected Both (Dogs and Cats)</label><br>
+                    <img src="images/dogandcaticon.png" width="200px" style="padding-top: 10px;">
+                </div>
+            
+
+
             <br><br>
             <label>Tell us what we could help you today?</label><br><br>
             <textarea rows="10" cols="50">Type here......</textarea><br><br>
@@ -111,4 +126,6 @@
         <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
     </div>
 </footer>
+<script src="js/selectContact.js"></script>
+<script src="js/selectAnimal.js"></script>
 </html>
