@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Best Friend Pet Adoption</title>
+    </head>
+<body id="adoptiondog">
+    <header>
+        <div>
+            <img src="images/logo.png" alt="logo" width="200">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="adoption-dog.html">Dogs</a></li>
+                    <li><a href="adoption-cat.html">Cats</a></li>
+                    <li class="active"><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <body id="gallery">
+        <h1>LOVELY AND HAPPY TIME WITH YOUR CUTIES!</h1><br>
+        <ul id="album">
+            <!-- <li id="photo"><img src="images/gallery/gallery1.jpg"></li>
+            <li id="photo"><img src="images/gallery/gallery2.jpg"></li>
+            <li id="photo"><img src="images//gallery/gallery3.jpg"></li>
+            <li id="photo"><img src="images/gallery/gallery4.jpg"></li>
+            <li id="photo"><img src="images/gallery/gallery5.jpg"></li>
+            <li id="photo"><img src="images/gallery/gallery6.jpg"></li>
+            <li id="photo"><img src="images/gallery/gallery7.jpg"></li>
+            <li id="photo"><img src="images/gallery/gallery8.jpg"></li>
+            <li id="photo"><img src="images/gallery/gallery9.jpg"></li>
+            <li id="photo"><img src="images/gallery/gallery10.jpg"></li>
+            <li id="photo"><img src="images/gallery/gallery11.jpg"></li>
+            <li id="photo"><img src="images/gallery/gallery12.jpg"></li> -->
+        </ul>
+    </body>
+    <br><br><br><br>
+
+    <footer>
+        <div id="information">
+            <h4>Email: info@bestfriendadoption.com</h4>
+            <h4>Phone: 626-BESTADO</h4>
+            <h4>Location: Los Angeles, CA</h4>
+        </div>
+        <div id="nondisclaimer">
+            <div class="copy">
+                &copy; Copyright 2023 :: bestfriendadoption.com
+            </div>
+            <div class="social">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+            </div>
+        </div>
+        <div id ="disclaimer">
+            <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
+        </div>
+    </footer>
+
+    <script>
+        var photos = []; //declare an empty array to store image element
+        var fileName = []; //declare an empty element to store image file name
+        var imageList = []; //decalre an empty array to store html list that contain an image
+        var image; //declare an empty variable to store the assembled image list codes
+        var openList1 = "<li id='photo"; //decalre a variable to contain open list tag
+        var openList2 = "'>";
+        var closeList = "</li>"; // declare a variable to contain close list tag
+        var captions = ["My cuties and me!", "Relaxing time!", "Miao~","Kiss my lovely dog!","Look~","Hi~ My cutie cat!","My cuties and me!","My cuties and me!","My cuties and me!","My cuties and me!","My cuties and me!","Kiss my lovely dog!"];
+        // var captionName = [];
+        var openCaptionTag = "<p class='captionName'>";
+        var closeCaptionTag = "</p>";
+        // var description;
+        var descText = ["Happy time with cuties!", "Happy time with cuties!","Happy time with cuties!","Happy time with cuties!","Happy time with cuties!","Happy time with cuties!","Happy time with cuties!","Happy time with cuties!","Happy time with cuties!","Happy time with cuties!","Happy time with cuties!","Happy time with cuties!"];
+        var openDescTag = "<p class='description'>";
+        var closeDescTag = "</p>";
+
+        //create a loop to create 6 images starting with index of 0
+        for (var i=0; i<12; i++){
+            fileName.push("gallery"+(i+1)); //create image file name and store in the array
+            // captionName.push("Me and my cuties " + (i+1));
+            photos.push("<img src='images/gallery/"+fileName[i]+".jpg'>");// assemble file name into image element and store in an array
+            // captions = openCaptionTag + closeCaptionTag;
+            // description= openDescTag + descText +closeDescTag;
+            image = openList1 + (i+1) + openList2 + photos[i] + openCaptionTag + captions[i]+ closeCaptionTag + openDescTag + descText[i] +closeDescTag  + closeList; //assemble image element from array with list elements and store in a variable
+            imageList.push(image); //store (push) the assembled list codes into an array
+        }
+        
+
+
+        //display all six image codes stored in the array
+        document.getElementById("album").innerHTML=imageList.join("");
+    </script>
+</html>
